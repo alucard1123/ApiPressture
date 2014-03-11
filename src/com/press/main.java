@@ -1,6 +1,8 @@
 package com.press;
 
 import com.file.ReadConfigFile;
+import com.thread.Betting_Sender;
+import com.thread.P_BaseInfo;
 import com.tool.Debuger;
 
 import java.io.*;
@@ -18,6 +20,7 @@ public class main {
         //load debug file into argMap
         Map<String,String> argMap = ReadConfigFile.ReadConfigArgs("config.ini");
         String ip = argMap.get("ServiceIP");
+        int LoopTime = Integer.parseInt(args[1]);
         int apiName = Integer.parseInt(argMap.get("ApiName"));
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
@@ -25,7 +28,8 @@ public class main {
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
-                        
+                        new Thread(new P_BaseInfo(ip,token,LoopTime)).start();
+                        break;
 
                 }
             }
