@@ -10,8 +10,6 @@ public class ResponseCutter {
 
     public static String HttpResponseCutter(String input){
         Map<String,String> ArgMap = new HashMap();
-        //input= "{\"Command\":\"Login\",\"ReturnCode\":\"10201\"}";
-        //System.out.println(input.replaceAll("[${\"*\"}]", ""));
         String[] argPair = input.replaceAll("[${\"*\"}]", "").split(",");
         for(int i = 0;i<argPair.length;i++){
         	String[] rtnPair = argPair[i].split(":");

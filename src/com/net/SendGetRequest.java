@@ -19,7 +19,6 @@ public class SendGetRequest {
         String inputLine="";
 
         inputLine = in.readLine();
-        //System.out.println(inputLine);
         in.close();
         return inputLine;
     }
