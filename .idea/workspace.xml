@@ -64,10 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+            <state line="13" column="32" selection-start="279" selection-end="279" vertical-scroll-proportion="-0.037099496" vertical-offset="97" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -76,19 +76,19 @@
       <file leaf-file-name="P_GameParam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thread/P_GameParam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="277" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="25" column="13" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="840">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P_BetDetail.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="P_BetDetail.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thread/P_BetDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="594">
-              <folding />
+            <state line="8" column="44" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="690">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,10 +96,8 @@
       <file leaf-file-name="P_SubAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thread/P_SubAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="705">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,10 +105,8 @@
       <file leaf-file-name="P_BaseInfo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thread/P_BaseInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="735">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="22" column="22" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="720">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,7 +114,7 @@
       <file leaf-file-name="config.ini" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="43" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+            <state line="2" column="12" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
@@ -142,12 +138,12 @@
         <option value="$PROJECT_DIR$/src/com/thread/Betting_Sender.java" />
         <option value="$PROJECT_DIR$/config.txt" />
         <option value="$PROJECT_DIR$/ip.ini" />
-        <option value="$PROJECT_DIR$/config.ini" />
         <option value="$PROJECT_DIR$/src/com/thread/P_BaseInfo.java" />
         <option value="$PROJECT_DIR$/src/com/thread/P_SubAccount.java" />
-        <option value="$PROJECT_DIR$/src/com/press/main.java" />
-        <option value="$PROJECT_DIR$/src/com/thread/P_GameParam.java" />
         <option value="$PROJECT_DIR$/src/com/thread/P_BetDetail.java" />
+        <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/src/com/thread/P_GameParam.java" />
+        <option value="$PROJECT_DIR$/src/com/press/main.java" />
       </list>
     </option>
   </component>
@@ -529,7 +525,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -605,6 +601,94 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_GameParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="277" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BetDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="360">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_SubAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BaseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="43" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_GameParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="277" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BetDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="360">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_SubAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BaseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="43" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="70" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="705">
@@ -772,23 +856,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/net/SendGetRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="34" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
+        <state line="20" column="34" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/str/ResponseCutter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
+        <state line="11" column="50" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/file/ReadConfigFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="615">
-          <folding />
-        </state>
+        <state line="25" column="22" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/token.txt">
@@ -798,14 +876,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="43" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+        <state line="2" column="12" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thread/P_BaseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="735">
+        <state line="22" column="22" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_SubAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_GameParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BetDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -814,32 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thread/P_GameParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="277" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thread/P_SubAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="74" selection-start="1036" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="705">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thread/P_BetDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="594">
+        <state line="13" column="32" selection-start="279" selection-end="279" vertical-scroll-proportion="-0.037099496" vertical-offset="97" max-vertical-offset="915">
           <folding />
         </state>
       </provider>

@@ -2,6 +2,8 @@ package com.press;
 
 import com.file.ReadConfigFile;
 import com.thread.P_BaseInfo;
+import com.thread.P_BetDetail;
+import com.thread.P_GameParam;
 import com.thread.P_SubAccount;
 import com.tool.Debuger;
 
@@ -22,6 +24,7 @@ public class main {
         String ip = argMap.get("ServiceIP");
         int LoopTime = Integer.parseInt(args[1]);
         int apiName = Integer.parseInt(argMap.get("ApiName"));
+        String apiArg = argMap.get("ApiArg");
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
             String token;
@@ -34,7 +37,18 @@ public class main {
                         new Thread(new P_SubAccount(ip,token,LoopTime)).start();
                         break;
                     case 3 :
-
+                        new Thread(new P_GameParam(token,ip,LoopTime,apiArg));
+                        break;
+                    case 4 :
+                        break;
+                    case 5 :
+                        break;
+                    case 6 :
+                        new Thread(new P_BetDetail(token,ip,LoopTime));
+                        break;
+                    default:
+                        System.out.println("no matched type:"+apiName);
+                        break;
 
                 }
             }
