@@ -21,7 +21,7 @@ public class P_BaseInfo implements Runnable{
 
     @Override
     public void run(){
-
+        int successCount = 0;
         while (loop >0){
             String url = "http://"+ip+head+"access_token="+token+"&requestParam=";
 
@@ -29,7 +29,7 @@ public class P_BaseInfo implements Runnable{
                 String returned = SendGetRequest.SendUrlRequest(url);
                 JSONObject jo = new JSONObject(returned);
                 if(jo.get("ReturnCode")=="00000"){
-
+                    successCount++;
                 }
 
             } catch (Exception e) {
@@ -37,6 +37,7 @@ public class P_BaseInfo implements Runnable{
             }
             loop--;
         }
+        System.out.println("token:"+token+" complete with:"+successCount);
     }
 
 }

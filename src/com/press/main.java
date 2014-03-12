@@ -1,8 +1,8 @@
 package com.press;
 
 import com.file.ReadConfigFile;
-import com.thread.Betting_Sender;
 import com.thread.P_BaseInfo;
+import com.thread.P_SubAccount;
 import com.tool.Debuger;
 
 import java.io.*;
@@ -24,12 +24,17 @@ public class main {
         int apiName = Integer.parseInt(argMap.get("ApiName"));
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
-            String token = null;
+            String token;
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
                         new Thread(new P_BaseInfo(ip,token,LoopTime)).start();
                         break;
+                    case 2 :
+                        new Thread(new P_SubAccount(ip,token,LoopTime)).start();
+                        break;
+                    case 3 :
+
 
                 }
             }
