@@ -7,6 +7,7 @@ import org.json.JSONObject;
  * Created by Edward on 14-3-12.
  */
 public class P_BetDetail implements Runnable{
+    private byte[] lock = new byte[0];
     String token = null;
     String ip = null;
     int loop = 0;
@@ -25,11 +26,15 @@ public class P_BetDetail implements Runnable{
 
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
-                JSONObject jo = new JSONObject(returned);
-                if(jo.get("ReturnCode")=="00000"){
-                    successCount++;
-                }
 
+                synchronized(lock){
+                    JSONObject jo = new JSONObject(returned);
+                    if(jo.get("ReturnCode").equals("00000")){
+                        successCount++;
+                    }
+                    lock.wait();
+                    lock.notify();
+                }
             } catch (Exception e) {
                 System.out.println("unexpected error in sending request");
             }

@@ -37,7 +37,7 @@ public class P_GameParam implements Runnable{
                     //send url here
                     String returned = SendGetRequest.SendUrlRequest(url);
                     JSONObject r_jo = new JSONObject(returned);
-                    if(r_jo.get("ReturnCode")=="00000"){
+                    if(r_jo.get("ReturnCode").equals("00000")){
                         successCount++;
                     }
                 } catch (UnsupportedEncodingException e) {

@@ -26,7 +26,7 @@ public class P_SubAccount implements Runnable {
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
                 JSONObject jo = new JSONObject(returned);
-                if(jo.get("ReturnCode")=="00000"){
+                if(jo.get("ReturnCode").equals("00000")){
                     successCount++;
                 }
 

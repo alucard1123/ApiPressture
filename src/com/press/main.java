@@ -22,7 +22,7 @@ public class main {
         //load debug file into argMap
         Map<String,String> argMap = ReadConfigFile.ReadConfigArgs("config.ini");
         String ip = argMap.get("ServiceIP");
-        int LoopTime = Integer.parseInt(args[1]);
+        int LoopTime = Integer.parseInt(args[0]);
         int apiName = Integer.parseInt(argMap.get("ApiName"));
         String apiArg = argMap.get("ApiArg");
         try {
@@ -31,10 +31,10 @@ public class main {
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
-                        new Thread(new P_BaseInfo(ip,token,LoopTime)).start();
+                        new Thread(new P_BaseInfo(token,ip,LoopTime)).start();
                         break;
                     case 2 :
-                        new Thread(new P_SubAccount(ip,token,LoopTime)).start();
+                        new Thread(new P_SubAccount(token,ip,LoopTime)).start();
                         break;
                     case 3 :
                         new Thread(new P_GameParam(token,ip,LoopTime,apiArg));
@@ -57,7 +57,5 @@ public class main {
         } catch (IOException e) {
             System.out.println("IO error");
         }
-        int looper = Integer.parseInt(args[1]);
-
     }
 }
