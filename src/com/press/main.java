@@ -11,6 +11,9 @@ import com.tool.Debuger;
 import java.io.*;
 import java.util.Map;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by Edward on 14-1-20.
  */
@@ -26,7 +29,13 @@ public class main {
         int LoopTime = Integer.parseInt(args[0]);
         int apiName = Integer.parseInt(argMap.get("ApiName"));
         String apiArg = argMap.get("ApiArg");
+        JSONObject jo  = new JSONObject();
+        
         try {
+        	jo.put("Amount", argMap.get("B_Amount"));
+        	jo.put("BetCode", argMap.get("B_BetCode"));
+        	jo.put("BetData", argMap.get("B_BetData"));
+        	jo.put("LotteryType",argMap.get("B_LotteryType"));
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
             String token;
             while((token=br.readLine())!=null){
@@ -43,7 +52,7 @@ public class main {
                     case 4 :
                         break;
                     case 5 :
-                    	new Thread(new P_Betting(token,ip,LoopTime)).start();
+                    	new Thread(new P_Betting(token,ip,LoopTime,jo)).start();
                         break;
                     case 6 :
                         new Thread(new P_BetDetail(token,ip,LoopTime)).start();
@@ -58,6 +67,8 @@ public class main {
             System.out.println("file not found");
         } catch (IOException e) {
             System.out.println("IO error");
-        }
+        } catch (JSONException e) {
+			System.out.println("init JSON error");
+		}
     }
 }
