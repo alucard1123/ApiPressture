@@ -37,9 +37,11 @@ public class P_GameParam implements Runnable{
                             token+"&requestParam="+ URLEncoder.encode(jo.toString(),"UTF-8");
                     //send url here
                     String returned = SendGetRequest.SendUrlRequest(url);
-                    JSONObject r_jo = new JSONObject(returned);
-                    if(r_jo.get("ReturnCode").equals("00000")){
-                        successCount++;
+                    if(returned!=null){
+                    	JSONObject r_jo = new JSONObject(returned);
+	                    if(r_jo.get("ReturnCode").equals("00000")){
+	                        successCount++;
+	                    }
                     }
                 } catch (UnsupportedEncodingException e) {
                     System.out.println("unexpected url encoding exception");

@@ -3,6 +3,7 @@ package com.press;
 import com.file.ReadConfigFile;
 import com.thread.P_BaseInfo;
 import com.thread.P_BetDetail;
+import com.thread.P_Betting;
 import com.thread.P_GameParam;
 import com.thread.P_SubAccount;
 import com.tool.Debuger;
@@ -37,14 +38,15 @@ public class main {
                         new Thread(new P_SubAccount(token,ip,LoopTime)).start();
                         break;
                     case 3 :
-                        new Thread(new P_GameParam(token,ip,LoopTime,apiArg));
+                        new Thread(new P_GameParam(token,ip,LoopTime,apiArg)).start();
                         break;
                     case 4 :
                         break;
                     case 5 :
+                    	new Thread(new P_Betting(token,ip,LoopTime)).start();
                         break;
                     case 6 :
-                        new Thread(new P_BetDetail(token,ip,LoopTime));
+                        new Thread(new P_BetDetail(token,ip,LoopTime)).start();
                         break;
                     default:
                         System.out.println("no matched type:"+apiName);
