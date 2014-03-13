@@ -1,7 +1,10 @@
 package com.thread;
 
 import com.net.SendGetRequest;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
 
 
 /**
@@ -32,8 +35,10 @@ public class P_BaseInfo implements Runnable{
                     successCount++;
                 }
 
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.out.println("unexpected error in sending request");
+            } catch (JSONException e) {
+                System.out.println("unexpected error in get JSON");
             }
             loop--;
         }

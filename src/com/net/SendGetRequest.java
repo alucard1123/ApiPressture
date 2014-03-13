@@ -1,7 +1,9 @@
 package com.net;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -10,7 +12,7 @@ import java.net.URLConnection;
  */
 public class SendGetRequest {
 
-    public static String SendUrlRequest(String url) throws Exception{
+    public static String SendUrlRequest(String url) throws IOException {
         URL yahoo = new URL(url);
         URLConnection yc = yahoo.openConnection();
         BufferedReader in = new BufferedReader(

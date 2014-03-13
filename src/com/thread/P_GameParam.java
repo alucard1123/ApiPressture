@@ -4,6 +4,7 @@ import com.net.SendGetRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -41,15 +42,15 @@ public class P_GameParam implements Runnable{
                         successCount++;
                     }
                 } catch (UnsupportedEncodingException e) {
-                    System.out.println("case url encoding exception");
-                } catch (Exception e) {
+                    System.out.println("unexpected url encoding exception");
+                } catch (IOException e) {
                     System.out.println("unexpected error in sending request");
                 }
                 loop--;
             }
             System.out.println("token:"+token+" complete with:"+successCount);
         } catch (JSONException e) {
-            System.out.println("Set JSON string fail with exception");
+            System.out.println("unexpected error in get JSON");
         }
     }
 }

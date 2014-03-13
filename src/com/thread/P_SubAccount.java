@@ -1,7 +1,10 @@
 package com.thread;
 
 import com.net.SendGetRequest;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
 
 /**
  * Created by Edward on 14-3-11.
@@ -29,9 +32,10 @@ public class P_SubAccount implements Runnable {
                 if(jo.get("ReturnCode").equals("00000")){
                     successCount++;
                 }
-
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.out.println("unexpected error in sending request");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
             loop--;
         }

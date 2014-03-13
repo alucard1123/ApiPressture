@@ -1,13 +1,13 @@
 package com.thread;
 
 import com.net.SendGetRequest;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
  * Created by Edward on 14-3-12.
  */
 public class P_BetDetail implements Runnable{
-    private byte[] lock = new byte[0];
     String token = null;
     String ip = null;
     int loop = 0;
@@ -27,15 +27,16 @@ public class P_BetDetail implements Runnable{
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
 
-                synchronized(lock){
+                synchronized(this){
                     JSONObject jo = new JSONObject(returned);
                     if(jo.get("ReturnCode").equals("00000")){
                         successCount++;
                     }
-                    lock.wait();
-                    lock.notify();
                 }
-            } catch (Exception e) {
+            }catch (JSONException je){
+                System.out.println("unexpected error in get JSON");
+            }
+            catch (Exception e) {
                 System.out.println("unexpected error in sending request");
             }
             loop--;
