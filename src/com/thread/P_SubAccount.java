@@ -28,9 +28,11 @@ public class P_SubAccount implements Runnable {
 
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
+                if(returned!=null){
                 JSONObject jo = new JSONObject(returned);
-                if(jo.get("ReturnCode").equals("00000")){
-                    successCount++;
+                    if(jo.get("ReturnCode").equals("00000")){
+                        successCount++;
+                    }
                 }
             } catch (IOException e) {
                 System.out.println("unexpected error in sending request");

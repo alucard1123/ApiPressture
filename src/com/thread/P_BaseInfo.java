@@ -27,14 +27,14 @@ public class P_BaseInfo implements Runnable{
         int successCount = 0;
         while (loop >0){
             String url = "http://"+ip+head+"access_token="+token+"&requestParam=";
-
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
-                JSONObject jo = new JSONObject(returned);
-                if(jo.get("ReturnCode").equals("00000")){
-                    successCount++;
+                if(returned!=null){
+                    JSONObject jo = new JSONObject(returned);
+                    if(jo.get("ReturnCode").equals("00000")){
+                        successCount++;
+                    }
                 }
-
             } catch (IOException e) {
                 System.out.println("unexpected error in sending request");
             } catch (JSONException e) {

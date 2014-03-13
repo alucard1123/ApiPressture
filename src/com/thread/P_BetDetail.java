@@ -26,8 +26,7 @@ public class P_BetDetail implements Runnable{
 
             try {
                 String returned = SendGetRequest.SendUrlRequest(url);
-
-                synchronized(this){
+                if(returned!=null){
                     JSONObject jo = new JSONObject(returned);
                     if(jo.get("ReturnCode").equals("00000")){
                         successCount++;
