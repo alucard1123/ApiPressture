@@ -35,10 +35,13 @@ public class P_BaseInfo implements Runnable{
                         successCount++;
                     }
                 }
+                Thread.sleep(100);
             } catch (IOException e) {
                 System.out.println("unexpected error in sending request");
             } catch (JSONException e) {
                 System.out.println("unexpected error in get JSON");
+            } catch (InterruptedException e) {
+                System.out.println("unexpected error in sleep");
             }
             loop--;
         }
