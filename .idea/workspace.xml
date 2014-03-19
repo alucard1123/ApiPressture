@@ -67,7 +67,7 @@
       <file leaf-file-name="P_BaseInfo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thread/P_BaseInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="46" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="795">
+            <state line="42" column="46" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -85,8 +85,10 @@
       <file leaf-file-name="main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="69" selection-start="2998" selection-end="2998" vertical-scroll-proportion="1.3131313" vertical-offset="225" max-vertical-offset="1140">
-              <folding />
+            <state line="97" column="44" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.88383836" vertical-offset="720" max-vertical-offset="1395">
+              <folding>
+                <element signature="e#1471#1479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,7 +162,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,6 +245,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -782,8 +784,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/press/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="69" selection-start="2998" selection-end="2998" vertical-scroll-proportion="1.3131313" vertical-offset="225" max-vertical-offset="1140">
-          <folding />
+        <state line="97" column="44" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.88383836" vertical-offset="720" max-vertical-offset="1395">
+          <folding>
+            <element signature="e#1471#1479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

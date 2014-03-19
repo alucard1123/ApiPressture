@@ -9,6 +9,8 @@ import com.thread.P_SubAccount;
 import com.tool.Debuger;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONException;
@@ -40,30 +42,45 @@ public class main {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
             String token;
             long threadstart = System.currentTimeMillis();
+            List<Thread> list = new ArrayList<Thread>();
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
-                        new Thread(new P_BaseInfo(token,ip,LoopTime)).start();
+                        Thread t_baseinfo = new Thread(new P_BaseInfo(token,ip,LoopTime));
+                        t_baseinfo.start();
+                        list.add(t_baseinfo);
                         break;
                     case 2 :
-                        new Thread(new P_SubAccount(token,ip,LoopTime)).start();
+                        Thread t_subaccount = new Thread(new P_SubAccount(token,ip,LoopTime));
+                        t_subaccount.start();
+                        list.add(t_subaccount);
                         break;
                     case 3 :
-                        new Thread(new P_GameParam(token,ip,LoopTime,apiArg)).start();
+                        Thread t_gameparam = new Thread(new P_GameParam(token,ip,LoopTime,apiArg));
+                        t_gameparam.start();
+                        list.add(t_gameparam);
                         break;
                     case 4 :
                         break;
                     case 5 :
-                    	new Thread(new P_Betting(token,ip,LoopTime,jo)).start();
+                    	Thread t_betting = new Thread(new P_Betting(token,ip,LoopTime,jo));
+                        t_betting.start();
+                        list.add(t_betting);
                         break;
                     case 6 :
-                        new Thread(new P_BetDetail(token,ip,LoopTime)).start();
+                        Thread t_betdetail = new Thread(new P_BetDetail(token,ip,LoopTime));
+                        t_betdetail.start();
+                        list.add(t_betdetail);
                         break;
                     default:
                         System.out.println("no matched type:"+apiName);
                         break;
                 }
                 tokenNumber++;
+            }
+            for(Thread thread : list)
+            {
+                thread.join();
             }
             long starttotal = System.currentTimeMillis()-threadstart;
             System.out.println("init threads costs:"+starttotal+"ms");
@@ -73,7 +90,9 @@ public class main {
             System.out.println("IO error");
         } catch (JSONException e) {
 			System.out.println("init JSON error");
-		}
+		} catch (InterruptedException e) {
+            System.out.println("join thread error");
+        }
 
         long fintotal = System.currentTimeMillis()-start;
         double perCost = fintotal/(tokenNumber*LoopTime);
