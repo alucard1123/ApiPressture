@@ -1,5 +1,6 @@
 package com.thread;
 
+import com.exception.HttpException;
 import com.net.SendGetRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,6 +51,8 @@ public class P_Betting implements Runnable{
                     System.out.println("Error while sending message");
                 }catch (JSONException e) {
                     System.out.println("error while doing JSON get");
+                } catch (HttpException e) {
+                    System.out.println("caught http error "+e.getHttpStatus());
                 }
                 loop--;
             }

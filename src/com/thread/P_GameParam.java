@@ -1,5 +1,6 @@
 package com.thread;
 
+import com.exception.HttpException;
 import com.net.SendGetRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -47,6 +48,8 @@ public class P_GameParam implements Runnable{
                     System.out.println("unexpected url encoding exception");
                 } catch (IOException e) {
                     System.out.println("unexpected error in sending request");
+                } catch (HttpException e) {
+                    System.out.println("caught http error "+e.getHttpStatus());
                 }
                 loop--;
             }

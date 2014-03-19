@@ -1,8 +1,11 @@
 package com.thread;
 
+import com.exception.HttpException;
 import com.net.SendGetRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
 
 /**
  * Created by Edward on 14-3-12.
@@ -35,8 +38,10 @@ public class P_BetDetail implements Runnable{
             }catch (JSONException je){
                 System.out.println("unexpected error in get JSON");
             }
-            catch (Exception e) {
+            catch (IOException e) {
                 System.out.println("unexpected error in sending request");
+            } catch (HttpException e) {
+                System.out.println("caught http error "+e.getHttpStatus());
             }
             loop--;
         }

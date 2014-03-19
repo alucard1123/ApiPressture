@@ -1,5 +1,6 @@
 package com.thread;
 
+import com.exception.HttpException;
 import com.net.SendGetRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,10 +39,13 @@ public class P_BaseInfo implements Runnable{
                 Thread.sleep(100);
             } catch (IOException e) {
                 System.out.println("unexpected error in sending request");
+                e.printStackTrace();
             } catch (JSONException e) {
                 System.out.println("unexpected error in get JSON");
             } catch (InterruptedException e) {
                 System.out.println("unexpected error in sleep");
+            } catch (HttpException e) {
+                System.out.println("caught http error "+e.getHttpStatus());
             }
             loop--;
         }

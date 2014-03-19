@@ -78,11 +78,11 @@ public class main {
                 }
                 tokenNumber++;
             }
+            long starttotal = System.currentTimeMillis()-threadstart;
             for(Thread thread : list)
             {
                 thread.join();
-            }
-            long starttotal = System.currentTimeMillis()-threadstart;
+            }          
             System.out.println("init threads costs:"+starttotal+"ms");
         } catch (FileNotFoundException e) {
             System.out.println("file not found");
@@ -93,9 +93,11 @@ public class main {
 		} catch (InterruptedException e) {
             System.out.println("join thread error");
         }
-
         long fintotal = System.currentTimeMillis()-start;
-        double perCost = fintotal/(tokenNumber*LoopTime);
+        System.out.println("total costs:"+fintotal+"ms");
+        double perCost = fintotal/(double)(tokenNumber*LoopTime);
         System.out.println("Press ended.Average cost:"+perCost+"ms");
+        int tps = (int) ((tokenNumber*LoopTime)*1000/fintotal);
+        System.out.println("Transort per second:"+tps);
     }
 }
