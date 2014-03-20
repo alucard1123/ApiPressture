@@ -15,17 +15,24 @@ import java.net.URLConnection;
 public class SendGetRequest {
 
     public static String SendUrlRequest(String url) throws HttpException,IOException {
-        URL yahoo = null;
+        URL yahoo;
         yahoo = new URL(url);
         URLConnection yc = null;
         InputStreamReader isr = null;
+        BufferedReader in = null;
         try{
             yc = yahoo.openConnection();
-            isr = new InputStreamReader(yc.getInputStream());
-            BufferedReader in = new BufferedReader(isr);
-            String inputLine="";
-
-            inputLine = in.readLine();
+            if(yc!=null){
+                isr = new InputStreamReader(yc.getInputStream());
+            }else{
+                System.out.println("yc is null");
+            }
+            if(isr!=null){
+                in = new BufferedReader(isr);
+            }else{
+                System.out.println("isr is null");
+            }
+            String inputLine = in.readLine();
             in.close();
             isr.close();
             return inputLine;

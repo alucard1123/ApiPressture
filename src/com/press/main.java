@@ -42,7 +42,8 @@ public class main {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
             String token;
             long threadstart = System.currentTimeMillis();
-            List<Thread> list = new ArrayList<Thread>();
+            List<Thread>     list = new ArrayList<Thread>();
+            
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
