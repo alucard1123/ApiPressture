@@ -1,6 +1,7 @@
 package com.press;
 
 import com.file.ReadConfigFile;
+import com.net.SendGetRequest;
 import com.thread.P_BaseInfo;
 import com.thread.P_BetDetail;
 import com.thread.P_Betting;
@@ -41,13 +42,13 @@ public class main {
         	jo.put("LotteryType",argMap.get("B_LotteryType"));
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("token.txt")));
             String token;
-            long threadstart = System.currentTimeMillis();
+            long threadStart = System.currentTimeMillis();
             List<Thread>     list = new ArrayList<Thread>();
             
             while((token=br.readLine())!=null){
                 switch (apiName){
                     case 1 :
-                        Thread t_baseinfo = new Thread(new P_BaseInfo(token,ip,LoopTime));
+                        Thread t_baseinfo = new Thread(new P_BaseInfo(token,ip,LoopTime,threadStart));
                         t_baseinfo.start();
                         list.add(t_baseinfo);
                         break;
@@ -79,12 +80,12 @@ public class main {
                 }
                 tokenNumber++;
             }
-            long starttotal = System.currentTimeMillis()-threadstart;
+            long startTotal = System.currentTimeMillis()-threadStart;
             for(Thread thread : list)
             {
                 thread.join();
             }          
-            System.out.println("init threads costs:"+starttotal+"ms");
+            System.out.println("init threads costs:"+startTotal+"ms");
         } catch (FileNotFoundException e) {
             System.out.println("file not found");
         } catch (IOException e) {

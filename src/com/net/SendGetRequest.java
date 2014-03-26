@@ -33,8 +33,8 @@ public class SendGetRequest {
                 System.out.println("isr is null");
             }
             String inputLine = in.readLine();
-            in.close();
-            isr.close();
+            if(in!=null) {in.close();}
+            if(isr!=null) {isr.close();}
             return inputLine;
         }catch (IOException ex){
             HttpURLConnection hyc = (HttpURLConnection)yc;
